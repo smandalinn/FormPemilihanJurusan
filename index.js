@@ -3,6 +3,12 @@ const app = express();
 const { google } = require('googleapis');
 const bodyParser = require('body-parser');
 const path = require('path');
+const express = require('express');
+const cors = require('cors');
+
+
+app.use(cors());
+
 
 //const PORT = process.env.PORT || 3000;
 const spreadsheetId = '1LJ3-aUgOrBK1wPCeJWUojxkajZh0lCmsamu6NC3Hle4';
