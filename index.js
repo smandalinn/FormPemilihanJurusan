@@ -4,7 +4,7 @@ const { google } = require('googleapis');
 const bodyParser = require('body-parser');
 const path = require('path');
 
-const PORT = process.env.PORT || 3000;
+//const PORT = process.env.PORT || 3000;
 const spreadsheetId = '1LJ3-aUgOrBK1wPCeJWUojxkajZh0lCmsamu6NC3Hle4';
 const sheets = google.sheets('v4');
 
@@ -81,9 +81,9 @@ app.post('/submit-form',async (req, res) => {
     res.send(`<script>alert('Data berhasil ditambahkan!'); window.location='/';</script>`);
   });
 
-app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`);
-});
+//app.listen(PORT, () => {
+   // console.log(`Server started on port ${PORT}`);
+//});
 
 
 
