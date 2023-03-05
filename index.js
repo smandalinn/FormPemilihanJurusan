@@ -69,6 +69,9 @@ app.post('/submit-form',async (req, res) => {
     const Nilai3 = req.body.Nilai3;
     const Mapel4 = req.body.Mapel1;
     const Nilai4 = req.body.Nilai4;
+    const auth = new google.auth.GoogleAuth({
+      keyFile: 'keys.json',
+      scopes: ['https://www.googleapis.com/auth/spreadsheets']});
 
     const alreadyExists = await findData(spreadsheetId, 'A:K', nis); 
     if (alreadyExists) {
